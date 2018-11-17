@@ -33,11 +33,11 @@ Test data and search index are stored on different disks in order to utilize the
 ## Benchmark results
 
 |                           | [Lucene](http://lucene.apache.org/core/) v7.5   | [SeekStorm](https://seekstorm.com/) v0.1   |
-| ------------------------- | ------------- | ------------- |    
+| :--- | ---: | ---: |    
 | **Search Throughput** (QPS)   | 62  | 553  |
 | **Search Latency** (ms)   | 80  | 12  |
-| mean |  80ms | 13  |
-| median |  70ms | 13  |
+| mean |  80 | 13  |
+| median |  70 | 13  |
 | 50th percentile | 71  | 13  |
 | 75th percentile | 91  | 19  |
 | 90th percentile | 120  | 24  |
