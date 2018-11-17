@@ -26,16 +26,17 @@ Five consecutive lines comprise a single document: title, content, domain, url, 
 [TREC 2009 Million Query Track](https://trec.nist.gov/data/million.query09.html)<br>
 The test queries are stored in a plain text file (UTF-8).
 <br><br>
-The test data and the search index are stored on different disks in order to utilize the full disk speed for indexing and searching, uncompromized by reading the test data.
+Test data and search index are stored on different disks in order to utilize the full disk speed for indexing and searching, uncompromized by reading the test data.
 
 ## Benchmark results
 
 |                           | [Lucene](http://lucene.apache.org/core/) v7.5   | [SeekStorm](https://seekstorm.com/) v0.1   |
 | ------------------------- | ------------- | ------------- |    
-| Search Throughput (QPS)   | Content Cell  | Content Cell  |
-| Indexing Speed (docs/day) | Content Cell  | Content Cell  |
-| Indexing Speed (GB/hour)  | Content Cell  | Content Cell  |
-| Index Size (GB)           | Content Cell  | Content Cell  |
+| Search Throughput (QPS)   | 65  | 588  |
+| Search Latency (ms)   | 79  | 12  |
+| Indexing Speed (docs/day) | 1,042 | 473  |
+| Indexing Speed (GB/hour)  | 135  | 61  |
+| Index Size (GB)           | 16  | 18  |
 
 ### Hardware
 Intel Core i7-8750H<br>
