@@ -3,6 +3,8 @@ LuceneBench<br>
 [Apache Lucene](http://lucene.apache.org/core/) is a high-performance text search engine library written in Java.<br>
 The widely used search platforms  [Solr](http://lucene.apache.org/solr/) and [Elasticsearch](https://www.elastic.co/de/products/elasticsearch) are both based on Lucene.
 <br><br>
+[SeekStorm](https://seekstorm.com) is is a high-performance text search engine library written in C#, powering the SeekStorm Search as a Service.
+<br><br>
 Performance for Indexing and Search is often important, but reliable numbers are hard to obtain. 
 While there are many benchmark results published, they all vary depending on the number of documents, size of document, the hardware (Processor, RAM, SSD type), operating system, the number of parallel users. 
 <br><br>
