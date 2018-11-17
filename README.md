@@ -28,6 +28,16 @@ The test queries are stored in a plain text file (UTF-8).
 <br><br>
 The test data and the search index are stored on different disks in order to utilize the full disk speed for indexing and searching, uncompromized by reading the test data.
 
+## Benchmark results
 
+|                           | [Lucene](http://lucene.apache.org/core/) v7.5   | [SeekStorm](https://seekstorm.com/) v0.1   |
+| ------------------------- | ------------- |
+| Search Throughput (QPS)   | Content Cell  |Content Cell  |
+| Indexing Speed (docs/day) | Content Cell  |Content Cell  |
+| Indexing Speed (GB/hour)  | Content Cell  |Content Cell  |
+| Index Size (GB)           | Content Cell  |Content Cell  |
 
-
+### Hardware
+Intel Core i7-8750H<br>
+32 GB RAM<br>
+Samsung 970 EVO SSD, 1TB<br>
