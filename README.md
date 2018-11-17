@@ -23,7 +23,7 @@ The Wikipedia dump original XML format has been exported to a plain text file (U
 Five consecutive lines comprise a single document: title, content, domain, url, date.
 
 ## Query Test data
-[TREC 2009 Million Query Track](https://trec.nist.gov/data/million.query09.html)<br>
+[TREC 2009 Million Query Track](https://trec.nist.gov/data/million.query09.html) (40,000 queries)<br>
 The test queries are stored in a plain text file (UTF-8).
 <br><br>
 Test data and search index are stored on different disks in order to utilize the full disk speed for indexing and searching, uncompromized by reading the test data.
