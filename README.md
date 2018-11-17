@@ -46,6 +46,7 @@ All fields are stored<br>
 Full text search in all fields.<br>
 Multithreaded indexing: 16 Threads as [recommended](https://home.apache.org/~mikemccand/lucenebench/indexing.html)<br>
 Multithreaded queries: 5 Threads<br>
+Lucene RAM buffer size: 2048 MB as [recommended](https://home.apache.org/~mikemccand/lucenebench/indexing.html)<br>
 JRE parameters: -Xmx8g -Xms8g -server as [recommended](https://home.apache.org/~mikemccand/lucenebench/indexing.html)
 
 ### Hardware
