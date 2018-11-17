@@ -42,10 +42,10 @@ Test data and search index are stored on different disks in order to utilize the
 | Index Size (GB)           | 16  | 18  |
 
 ### Benchmark conditions
-All fields are stored<br>
+All fields are stored.<br>
 Full text search in all fields.<br>
-Multithreaded indexing: 16 Threads as [recommended](https://home.apache.org/~mikemccand/lucenebench/indexing.html)<br>
 Multithreaded queries: 5 Threads<br>
+Multithreaded indexing: 16 Threads as [recommended](https://home.apache.org/~mikemccand/lucenebench/indexing.html)<br>
 Lucene RAM buffer size: 2048 MB as [recommended](https://home.apache.org/~mikemccand/lucenebench/indexing.html)<br>
 JRE parameters: -Xmx8g -Xms8g -server as [recommended](https://home.apache.org/~mikemccand/lucenebench/indexing.html)
 
