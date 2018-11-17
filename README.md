@@ -41,7 +41,19 @@ Test data and search index are stored on different disks in order to utilize the
 | Indexing Speed (GB/hour)  | 135  | 61  |
 | Index Size (GB)           | 16  | 18  |
 
+### Benchmark conditions
+All fields are stored<br>
+Full text search in all fields.<br>
+Multithreaded indexing: 16 Threads as [recommended](https://home.apache.org/~mikemccand/lucenebench/indexing.html)<br>
+Multithreaded queries: 5 Threads<br>
+JRE parameters: -Xmx8g -Xms8g -server as [recommended](https://home.apache.org/~mikemccand/lucenebench/indexing.html)
+
 ### Hardware
 Intel Core i7-8750H<br>
 32 GB RAM<br>
 Samsung 970 EVO SSD, 1TB<br>
+
+### Software
+Java JRE 10.0.2<br>
+Lucene 7.5.2<br>
+Microsoft Windows 10 Professional<br>
