@@ -34,7 +34,7 @@ Test data and search index are stored on different disks in order to utilize the
 | ------------------------- | ------------- | ------------- |    
 | Search Throughput (QPS)   | 65  | 588  |
 | Search Latency (ms)   | 79  | 12  |
-| Indexing Speed (docs/day) | 1,042 | 473  |
+| Indexing Speed (million docs/day) | 1,042 | 473  |
 | Indexing Speed (GB/hour)  | 135  | 61  |
 | Index Size (GB)           | 16  | 18  |
 
