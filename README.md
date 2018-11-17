@@ -9,7 +9,7 @@ While there are many benchmark results published, they all vary depending on the
 The only way is to run a benchmark according to your specific requirements on your hardware.
 <br><br>
 ## Key Performance Indicators
-Lucene Bench measures following Key Performance Indicators (KPI):
+Lucene Bench measures the following Key Performance Indicators (KPI):
 <br>
 * Indexing Throughput (million documents per day)
 * Search Througput (queries per second - QPS)
@@ -19,7 +19,7 @@ Lucene Bench measures following Key Performance Indicators (KPI):
 
 ## Indexing Test data
 [English Wikipedia dump](https://dumps.wikimedia.org/enwiki/latest/enwiki-latest-pages-articles.xml.bz2) (5,677,776 docs)<br>
-The Wikipedia dump originaly comes in a XML format and has been exported to a plain text file (UTF-8).
+The Wikipedia dump original XML format has been exported to a plain text file (UTF-8).
 Five consecutive lines comprise a single document: title, content, domain, url, date.
 
 ## Query Test data
