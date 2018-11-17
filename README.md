@@ -36,16 +36,16 @@ Test data and search index are stored on different disks in order to utilize the
 | :--- | ---: | ---: |    
 | **Search Throughput** (QPS)   | 62  | 553  |
 | **Search Latency** (ms)   | 80  | 12  |
-| &nbsp;mean |  80 | 13  |
-| median |  70 | 13  |
-| 50th percentile | 71  | 13  |
-| 75th percentile | 91  | 19  |
-| 90th percentile | 120  | 24  |
-| 95th percentile | 142  | 27  |
-| 98th percentile | 169  | 32  |
-| 99th percentile | 195  | 35  |
-| 99.9th percentile| 333  | 49  |
-| max| 363  | 52  |
+| &nbsp;&nbsp;&nbsp;mean |  80 | 13  |
+| &nbsp;&nbsp;&nbsp;median |  70 | 13  |
+| &nbsp;&nbsp;&nbsp;50th percentile | 71  | 13  |
+| &nbsp;&nbsp;&nbsp;75th percentile | 91  | 19  |
+| &nbsp;&nbsp;&nbsp;90th percentile | 120  | 24  |
+| &nbsp;&nbsp;&nbsp;95th percentile | 142  | 27  |
+| &nbsp;&nbsp;&nbsp;98th percentile | 169  | 32  |
+| &nbsp;&nbsp;&nbsp;99th percentile | 195  | 35  |
+| &nbsp;&nbsp;&nbsp;99.9th percentile| 333  | 49  |
+| &nbsp;&nbsp;&nbsp;max| 363  | 52  |
 | **Indexing Speed** (million docs/day) | 1,042 | 473  |
 | **Indexing Speed** (GB/hour)  | 135  | 61  |
 | **Index Size** (GB)           | 16  | 18  |
