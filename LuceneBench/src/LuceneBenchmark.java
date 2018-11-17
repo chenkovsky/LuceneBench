@@ -8,11 +8,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicLong;
+import java.util.concurrent.locks.ReentrantLock;
 
 //ImportWikipedia
 public class LuceneBenchmark 
 {
-    public static Boolean newindex=true;
+    public static Boolean newindex=false;
     public static int querySize = 2000;
     public static int userNumber = 5;
 
@@ -29,6 +30,10 @@ public class LuceneBenchmark
 
     public static  AtomicLong resultCountSum =new AtomicLong();
     public static  AtomicLong sumSearchTime =new AtomicLong();
+    public static  long  maxSearchTime =0;
+    public static  ReentrantLock lock = new ReentrantLock();
+
+    public static Sampling sampleSearchTime = new Sampling(10000);
 
     public static void LoadQueries(String filename)
     {
@@ -188,6 +193,19 @@ public class LuceneBenchmark
 
         //results, time, qps
         System.out.println("QueryCount: " + queryCount+"  userNumber: "+userNumber+"  Throughput: " + String.format("%,.2f",((double)queryCount * (double)1000 / (double)millis)) + " query/sec (QPS)"+"  resultCount: " + String.format("%,d",resultCountSum.get())+"  latency: "+String.format("%,d",LuceneBenchmark.sumSearchTime.get()/queryCount));
+        sampleSearchTime.Calc();
+        System.out.println("");
+        System.out.println("Search Latency");
+        System.out.println("mean: " + String.format("%,d",sumSearchTime.get() / queryCount) + "ms");
+        System.out.println("median: " + String.format("%,d",sampleSearchTime.median) + "ms");
+        System.out.println("50th percentile: " + String.format("%,d",sampleSearchTime.percentile50));
+        System.out.println("75th percentile: " + String.format("%,d",sampleSearchTime.percentile75));
+        System.out.println("90th percentile: " + String.format("%,d",sampleSearchTime.percentile90));
+        System.out.println("95th percentile: " + String.format("%,d",sampleSearchTime.percentile95));
+        System.out.println("98th percentile: " + String.format("%,d",sampleSearchTime.percentile98));
+        System.out.println("99th percentile: " + String.format("%,d",sampleSearchTime.percentile99));
+        System.out.println("99.9th percentile: " + String.format("%,d",sampleSearchTime.percentile999));
+        System.out.println("max: " + String.format("%,d",maxSearchTime) + "ms");
     }
 
 }

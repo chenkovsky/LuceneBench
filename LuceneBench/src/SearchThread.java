@@ -15,9 +15,17 @@ public class SearchThread implements Runnable
         {
             long start=System.currentTimeMillis();
             long count=LuceneBenchmark.lucene.search(queryString);  
-            long millis=System.currentTimeMillis()-start;
+            long searchTime=System.currentTimeMillis()-start;
             LuceneBenchmark.resultCountSum.addAndGet(count);
-            LuceneBenchmark.sumSearchTime.addAndGet(millis);
+            LuceneBenchmark.sumSearchTime.addAndGet(searchTime);
+
+            LuceneBenchmark.lock.lock();
+            try {
+                LuceneBenchmark.sampleSearchTime.Add(searchTime);
+                if (searchTime > LuceneBenchmark.maxSearchTime) LuceneBenchmark.maxSearchTime= searchTime;
+            } finally {
+                LuceneBenchmark.lock.unlock();
+            }
         }
         finally
         {
