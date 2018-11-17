@@ -9,7 +9,7 @@ While there are many benchmark results published, they all vary depending on the
 The only way is to run a benchmark according to your specific requirements on your hardware.
 <br><br><br>
 Lucene Bench measures following Key Performance Indicators (KPI):
-<br><br>
+<br>
 * Indexing Throughput (million documents per day)
 * Search Througput (queries per second - QPS)
 * Query Latency (mean, median, maximum, percentiles)
