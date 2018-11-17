@@ -8,7 +8,7 @@ The widely used search platforms  [Solr](http://lucene.apache.org/solr/) and [El
 Performance for Indexing and Search is often important, but reliable numbers are hard to obtain. 
 While there are many benchmark results published, they all vary depending on the number of documents, size of document, the hardware (Processor, RAM, SSD type), operating system, the number of parallel users. 
 <br><br>
-The only way is to run a benchmark according to your specific requirements on your hardware.
+The only way to objectively compare technologies is to run a benchmark according to your specific requirements on your hardware.
 <br><br>
 ## Key Performance Indicators
 Lucene Bench measures the following Key Performance Indicators (KPI):
