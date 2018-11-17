@@ -1,4 +1,5 @@
 LuceneBench<br>
+[![MIT License](https://img.shields.io/github/license/wolfgarbe/lucenebench.svg)](https://github.com/wolfgarbe/LuceneBench/blob/master/LICENSE)
 ========
 [Apache Lucene](http://lucene.apache.org/core/) is a high-performance text search engine library written in Java.<br>
 The widely used search platforms  [Solr](http://lucene.apache.org/solr/) and [Elasticsearch](https://www.elastic.co/de/products/elasticsearch) are both based on Lucene.
