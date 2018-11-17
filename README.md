@@ -4,7 +4,7 @@ LuceneBench<br>
 The widely used search platforms  [Solr](http://lucene.apache.org/solr/) and [Elasticsearch](https://www.elastic.co/de/products/elasticsearch) are both based on Lucene.
 <br><br>
 Performance for Indexing and Search is often important, but reliable numbers are hard to obtain. 
-While there are many benchmark results published, they all vary depending on the number of documents, size of document, the hardware (Processor, RAM, SSD type), operating system, the number of parallel users. Therfore they might be completely different from what you can expects for your specifc environment and requirements.
+While there are many benchmark results published, they all vary depending on the number of documents, size of document, the hardware (Processor, RAM, SSD type), operating system, the number of parallel users. 
 <br><br>
 The only way is to run a benchmark according to your specific requirements on your hardware.
 <br><br><br>
