@@ -64,6 +64,6 @@ Intel Core i7-8750H<br>
 Samsung 970 EVO SSD, 1TB<br>
 
 ### Software
-Java JRE 10.0.2<br>
 Lucene 7.5.2<br>
+Java JRE 10.0.2<br>
 Microsoft Windows 10 Professional<br>
