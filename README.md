@@ -16,7 +16,7 @@ Lucene Bench measures following Key Performance Indicators (KPI):
 * Query Latency (mean, median, maximum, percentiles)
 * Concurrent Users
 * Index Size
-<br><br>
+
 ## Indexing Test data
 [English Wikipedia dump](https://dumps.wikimedia.org/enwiki/latest/enwiki-latest-pages-articles.xml.bz2) (5,677,776 docs)<br>
 The Wikipedia dump originaly comes in a XML format and has been exported to a plain text file (UTF-8).
