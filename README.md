@@ -1,8 +1,7 @@
 LuceneBench<br>
 [![MIT License](https://img.shields.io/github/license/wolfgarbe/lucenebench.svg)](https://github.com/wolfgarbe/LuceneBench/blob/master/LICENSE)
 ========
-[Apache Lucene](http://lucene.apache.org/core/) is a high-performance text search engine library written in Java.<br>
-The widely used search platforms  [Solr](http://lucene.apache.org/solr/) and [Elasticsearch](https://www.elastic.co/de/products/elasticsearch) are both based on Lucene.
+[Apache Lucene](http://lucene.apache.org/core/) is a high-performance text search engine library written in Java, powering the search platforms  [Solr](http://lucene.apache.org/solr/) and [Elasticsearch](https://www.elastic.co/de/products/elasticsearch).
 <br><br>
 [SeekStorm](https://seekstorm.com) is a high-performance search platform written in C#, powering the SeekStorm Search as a Service.
 <br><br>
