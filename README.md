@@ -6,7 +6,7 @@ LuceneBench<br>
 [SeekStorm](https://seekstorm.com) is a high-performance search platform written in C#, powering the SeekStorm Search as a Service.
 <br><br>
 Performance for Indexing and Search is of paramount importance, but reliable numbers are hard to obtain. 
-While there are many benchmark results published, they all vary depending on the number of documents, size of document, the hardware (Processor, RAM, SSD type), operating system, the number of parallel users. They are difficult to compare to other environments or technologies
+While there are many benchmark results published, they all vary depending on the number of documents, size of document, the hardware (Processor, RAM, SSD type), operating system, the number of parallel users. 
 <br><br>
 The only way to objectively compare technologies is to run a benchmark according to your requirements on your hardware.
 <br><br>
