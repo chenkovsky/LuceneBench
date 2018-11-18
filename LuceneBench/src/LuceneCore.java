@@ -122,7 +122,7 @@ public class LuceneCore
 				String content=d.get("content");
 				String domain=d.get("domain");
 				String url=d.get("url");
-				String condatetent=d.get("date");
+				String date=d.get("date");
 				String kwic ="";	
 									
 				//highlighter.setTextFragmenter(new SimpleFragmenter(80));
