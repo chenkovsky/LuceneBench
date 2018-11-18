@@ -55,9 +55,9 @@ Title, content, domain, url, date fields are stored and retrieved.<br>
 Full text search in all fields.<br>
 Highlighted KWIC summary generated from content field.<br>
 Multithreaded queries: 5 Threads (optimum)<br>
-Multithreaded indexing: 16 Threads as [recommended](https://home.apache.org/~mikemccand/lucenebench/indexing.html)<br>
-Lucene RAM buffer size: 2048 MB as [recommended](https://home.apache.org/~mikemccand/lucenebench/indexing.html)<br>
-JRE parameters: -Xmx8g -Xms8g -server as [recommended](https://home.apache.org/~mikemccand/lucenebench/indexing.html)
+Multithreaded indexing: 16 Threads (as [recommended](https://home.apache.org/~mikemccand/lucenebench/indexing.html))<br>
+Lucene RAM buffer size: 2048 MB (as [recommended](https://home.apache.org/~mikemccand/lucenebench/indexing.html))<br>
+JRE parameters: -Xmx8g -Xms8g -server (as [recommended](https://home.apache.org/~mikemccand/lucenebench/indexing.html))
 
 ### Hardware
 Intel Core i7-8750H<br>
