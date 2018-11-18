@@ -22,7 +22,7 @@ Lucene Bench measures the following Key Performance Indicators (KPI):
 ## Indexing Test data
 [English Wikipedia dump](https://dumps.wikimedia.org/enwiki/latest/enwiki-latest-pages-articles.xml.bz2) (5,677,776 docs)<br>
 The Wikipedia dump original XML format has been exported to a plain text file (UTF-8).
-Five consecutive lines consitute a single document: title, content, domain, url, date.
+Five consecutive lines constitute a single document: title, content, domain, url, date.
 
 ## Query Test data
 [TREC 2009 Million Query Track](https://trec.nist.gov/data/million.query09.html) (40,000 queries)<br>
@@ -51,9 +51,10 @@ Test data and search index are stored on different disks in order to utilize the
 | **Index Size** (GB)           | 16  | 18  |
 
 ### Benchmark conditions
-All fields are stored.<br>
+Title, content, domain, url, date fields are stored and retrieved.<br>
 Full text search in all fields.<br>
-Multithreaded queries: 5 Threads<br>
+Highlighted KWIC summary generated from content field.<br>
+Multithreaded queries: 5 Threads (optimum)<br>
 Multithreaded indexing: 16 Threads as [recommended](https://home.apache.org/~mikemccand/lucenebench/indexing.html)<br>
 Lucene RAM buffer size: 2048 MB as [recommended](https://home.apache.org/~mikemccand/lucenebench/indexing.html)<br>
 JRE parameters: -Xmx8g -Xms8g -server as [recommended](https://home.apache.org/~mikemccand/lucenebench/indexing.html)
