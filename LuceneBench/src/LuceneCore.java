@@ -12,14 +12,9 @@ import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.index.DirectoryReader;
 import org.apache.lucene.document.TextField;
 import org.apache.lucene.document.StoredField;
-import org.apache.lucene.search.vectorhighlight.FastVectorHighlighter;
-import org.apache.lucene.search.vectorhighlight.FieldQuery;
 import org.apache.lucene.search.highlight.Highlighter;
 import org.apache.lucene.search.highlight.QueryScorer;
-import org.apache.lucene.queryparser.classic.QueryParser;
-import org.apache.lucene.search.highlight.SimpleFragmenter;
 import org.apache.lucene.analysis.TokenStream;
-import java.io.Reader;
 
 import java.nio.file.Paths;
 
@@ -126,8 +121,8 @@ public class LuceneCore
 				String kwic ="";	
 									
 				//highlighter.setTextFragmenter(new SimpleFragmenter(80));
-				//TokenStream tokenStream = analyzer2.tokenStream("content", content);
-				//kwic = highlighter.getBestFragments(tokenStream, content, 1,"...");
+				//TokenStream tokenStream = analyzer.tokenStream("content", content);
+				//kwic = highlighter.getBestFragments(tokenStream, content, 2,"...");
 				kwic = highlighter.getBestFragment(analyzer, "content", content);
 				//System.out.println((i + 1) + ". " + title+" :: "+kwic);
 			}
