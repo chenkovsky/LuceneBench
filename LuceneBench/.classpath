@@ -6,9 +6,11 @@
     </attributes>
   </classpathentry>
   <classpathentry kind="lib" path="C:/lucene/lucene-7.5.0/core/lucene-core-7.5.0.jar"/>
- <classpathentry kind="lib" path="C:/lucene/lucene-7.5.0/queryparser/lucene-queryparser-7.5.0.jar"/>
- <classpathentry kind="lib" path="C:/lucene/lucene-7.5.0/analysis/common/lucene-analyzers-common-7.5.0.jar"/>
- <classpathentry kind="lib" path="C:/lucene/lucene-7.5.0/demo/lucene-demo-7.5.0.jar"/>
+  <classpathentry kind="lib" path="C:/lucene/lucene-7.5.0/queryparser/lucene-queryparser-7.5.0.jar"/>
+  <classpathentry kind="lib" path="C:/lucene/lucene-7.5.0/analysis/common/lucene-analyzers-common-7.5.0.jar"/>
+  <classpathentry kind="lib" path="C:/lucene/lucene-7.5.0/demo/lucene-demo-7.5.0.jar"/>
+  <classpathentry kind="lib" path="C:/lucene/lucene-7.5.0/highlighter/lucene-highlighter-7.5.0.jar"/>
+  <classpathentry kind="lib" path="C:/lucene/lucene-7.5.0/memory/lucene-memory-7.5.0.jar"/>
   <classpathentry kind="src" path="src"/>
   <classpathentry kind="output" path="bin"/>
 </classpath>

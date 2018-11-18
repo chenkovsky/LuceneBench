@@ -12,6 +12,14 @@ import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.index.DirectoryReader;
 import org.apache.lucene.document.TextField;
 import org.apache.lucene.document.StoredField;
+import org.apache.lucene.search.vectorhighlight.FastVectorHighlighter;
+import org.apache.lucene.search.vectorhighlight.FieldQuery;
+import org.apache.lucene.search.highlight.Highlighter;
+import org.apache.lucene.search.highlight.QueryScorer;
+import org.apache.lucene.queryparser.classic.QueryParser;
+import org.apache.lucene.search.highlight.SimpleFragmenter;
+import org.apache.lucene.analysis.TokenStream;
+import java.io.Reader;
 
 import java.nio.file.Paths;
 
@@ -96,21 +104,32 @@ public class LuceneCore
 			// Search
 			searcher.search(q, collector);
 			// Retrieve the top-10 documents
-			//ScoreDoc[] hits = collector.topDocs().scoreDocs;
 			TopDocs topDocs=collector.topDocs();
+			//TopDocs topDocs = searcher.search(q, hitsPerPage);
+
 			ScoreDoc[] hits = topDocs.scoreDocs;
 			//totalHits=topDocs.totalHits;
 			totalHits=(long)hits.length;
 
-			//TopDocs topDocs = searcher.search(q, hitsPerPage);
+			Highlighter highlighter = new Highlighter(new QueryScorer(q));		
 
 			// Display results
-			//System.out.println("Found " + hits.length + " hits.");
+			//System.out.println(querystr+" "  + hits.length + " hits.");
 			for (int i = 0; i < hits.length; ++i) {
 				int docId = hits[i].doc;
 				Document d = searcher.doc(docId);
 				String title=d.get("title");
-				//System.out.println((i + 1) + ". " + d.get("title"));
+				String content=d.get("content");
+				String domain=d.get("domain");
+				String url=d.get("url");
+				String condatetent=d.get("date");
+				String kwic ="";	
+									
+				//highlighter.setTextFragmenter(new SimpleFragmenter(80));
+				//TokenStream tokenStream = analyzer2.tokenStream("content", content);
+				//kwic = highlighter.getBestFragments(tokenStream, content, 1,"...");
+				kwic = highlighter.getBestFragment(analyzer, "content", content);
+				//System.out.println((i + 1) + ". " + title+" :: "+kwic);
 			}
 
 			// Close the searcher
