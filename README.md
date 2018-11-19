@@ -19,8 +19,6 @@ Lucene Bench measures the following Key Performance Indicators (KPI):
 * Concurrent Users
 * Index Size
 
-![Benchmark](https://wolfgarbe.github.io/LuceneBench/img/lucenebench.png "Benchmark")
-
 ## Indexing Test data
 [English Wikipedia dump](https://dumps.wikimedia.org/enwiki/latest/enwiki-latest-pages-articles.xml.bz2) (5,677,776 docs)<br>
 The Wikipedia dump original XML format has been exported to a plain text file (UTF-8).
@@ -33,6 +31,8 @@ The test queries are stored in a plain text file (UTF-8).
 Test data and search index are stored on different disks in order to utilize the full disk speed for indexing and searching, uncompromized by reading the test data.
 
 ## Benchmark results
+
+![Benchmark](https://wolfgarbe.github.io/LuceneBench/img/lucenebench.png "Benchmark")
 
 |                           | [Lucene](http://lucene.apache.org/core/) v7.5   | [SeekStorm](https://seekstorm.com/) v0.1   |
 | :--- | ---: | ---: |    
