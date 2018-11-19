@@ -1,7 +1,6 @@
 import java.util.Random;
 import java.util.List;
 import java.util.ArrayList;
-//import java.util.Arrays;
 
 public class Sampling
         {
@@ -18,6 +17,8 @@ public class Sampling
             public long percentile98 = 0;
             public long percentile99 = 0;
             public long percentile999 = 0;
+            public long maximum = 0;
+            public long sum = 0;
 
             public Sampling(int size)
             {
@@ -27,6 +28,9 @@ public class Sampling
             public void Add(long x)
             {
                 if (count == Integer.MAX_VALUE) return;
+
+                if (x > maximum) maximum= x;
+                sum+=x;
 
                 if (count < size)
                 {
