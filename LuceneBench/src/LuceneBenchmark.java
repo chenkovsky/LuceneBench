@@ -192,7 +192,6 @@ public class LuceneBenchmark
             System.out.println("Search Latency");
             System.out.println("mean: " + String.format("%,d",sampleSearchTime.sum/ queryCount) + "ms");
             System.out.println("median: " + String.format("%,d",sampleSearchTime.median) + "ms");
-            System.out.println("50th percentile: " + String.format("%,d",sampleSearchTime.percentile50));
             System.out.println("75th percentile: " + String.format("%,d",sampleSearchTime.percentile75));
             System.out.println("90th percentile: " + String.format("%,d",sampleSearchTime.percentile90));
             System.out.println("95th percentile: " + String.format("%,d",sampleSearchTime.percentile95));
