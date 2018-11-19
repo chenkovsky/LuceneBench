@@ -38,7 +38,6 @@ Test data and search index are stored on different disks in order to utilize the
 | **Search Latency** (ms)   | 80  | 12  |
 | &nbsp;&nbsp;&nbsp;mean |  80 | 13  |
 | &nbsp;&nbsp;&nbsp;median |  73 | 13  |
-| &nbsp;&nbsp;&nbsp;50th percentile | 73  | 13  |
 | &nbsp;&nbsp;&nbsp;75th percentile | 90  | 19  |
 | &nbsp;&nbsp;&nbsp;90th percentile | 116  | 24  |
 | &nbsp;&nbsp;&nbsp;95th percentile | 133  | 27  |
