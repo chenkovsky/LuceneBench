@@ -22,7 +22,7 @@ Lucene Bench measures the following Key Performance Indicators (KPI):
 ## Indexing Test data
 [English Wikipedia dump](https://dumps.wikimedia.org/enwiki/latest/enwiki-latest-pages-articles.xml.bz2) (5,677,776 docs)<br>
 The Wikipedia dump original XML format has been exported to a plain text file (UTF-8).
-Five consecutive lines consitute a single document: title, content, domain, url, date.
+Five consecutive lines constitute a single document: title, content, domain, url, date.
 
 ## Query Test data
 [TREC 2009 Million Query Track](https://trec.nist.gov/data/million.query09.html) (40,000 queries)<br>
@@ -33,20 +33,31 @@ Test data and search index are stored on different disks in order to utilize the
 ## Benchmark results
 
 |                           | [Lucene](http://lucene.apache.org/core/) v7.5   | [SeekStorm](https://seekstorm.com/) v0.1   |
-| ------------------------- | ------------- | ------------- |    
-| Search Throughput (QPS)   | 65  | 588  |
-| Search Latency (ms)   | 79  | 12  |
-| Indexing Speed (million docs/day) | 1,042 | 473  |
-| Indexing Speed (GB/hour)  | 135  | 61  |
-| Index Size (GB)           | 16  | 18  |
+| :--- | ---: | ---: |    
+| **Search Throughput** (QPS)   | 62  | 553  |
+| **Search Latency** (ms)   | 80  | 12  |
+| &nbsp;&nbsp;&nbsp;mean |  80 | 13  |
+| &nbsp;&nbsp;&nbsp;median |  73 | 13  |
+| &nbsp;&nbsp;&nbsp;50th percentile | 73  | 13  |
+| &nbsp;&nbsp;&nbsp;75th percentile | 90  | 19  |
+| &nbsp;&nbsp;&nbsp;90th percentile | 116  | 24  |
+| &nbsp;&nbsp;&nbsp;95th percentile | 133  | 27  |
+| &nbsp;&nbsp;&nbsp;98th percentile | 152  | 32  |
+| &nbsp;&nbsp;&nbsp;99th percentile | 176  | 35  |
+| &nbsp;&nbsp;&nbsp;99.9th percentile| 432  | 49  |
+| &nbsp;&nbsp;&nbsp;max| 469  | 52  |
+| **Indexing Speed** (million docs/day) | 1,042 | 473  |
+| **Indexing Speed** (GB/hour)  | 135  | 61  |
+| **Index Size** (GB)           | 16  | 18  |
 
 ### Benchmark conditions
-All fields are stored.<br>
+Title, content, domain, url, date fields are stored and retrieved.<br>
 Full text search in all fields.<br>
-Multithreaded queries: 5 Threads<br>
-Multithreaded indexing: 16 Threads as [recommended](https://home.apache.org/~mikemccand/lucenebench/indexing.html)<br>
-Lucene RAM buffer size: 2048 MB as [recommended](https://home.apache.org/~mikemccand/lucenebench/indexing.html)<br>
-JRE parameters: -Xmx8g -Xms8g -server as [recommended](https://home.apache.org/~mikemccand/lucenebench/indexing.html)
+Highlighted KWIC summary generated from content field.<br>
+Multithreaded queries: 5 Threads (optimum)<br>
+Multithreaded indexing: 16 Threads (as [recommended](https://home.apache.org/~mikemccand/lucenebench/indexing.html))<br>
+Lucene RAM buffer size: 2048 MB (as [recommended](https://home.apache.org/~mikemccand/lucenebench/indexing.html))<br>
+JRE parameters: -Xmx8g -Xms8g -server (as [recommended](https://home.apache.org/~mikemccand/lucenebench/indexing.html))
 
 ### Hardware
 Intel Core i7-8750H<br>
@@ -54,6 +65,6 @@ Intel Core i7-8750H<br>
 Samsung 970 EVO SSD, 1TB<br>
 
 ### Software
-Java JRE 10.0.2<br>
 Lucene 7.5.2<br>
+Java JRE 10.0.2<br>
 Microsoft Windows 10 Professional<br>
