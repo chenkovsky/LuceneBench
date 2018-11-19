@@ -19,7 +19,7 @@ Lucene Bench measures the following Key Performance Indicators (KPI):
 * Concurrent Users
 * Index Size
 
-![Benchmark](wolfgarbe.github.com/LuceneBench/img/lucenebench.png "Benchmark")
+![Benchmark](https://wolfgarbe.github.io/LuceneBench/img/lucenebench.png "Benchmark")
 
 ## Indexing Test data
 [English Wikipedia dump](https://dumps.wikimedia.org/enwiki/latest/enwiki-latest-pages-articles.xml.bz2) (5,677,776 docs)<br>
