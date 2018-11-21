@@ -9,13 +9,13 @@ Performance for Indexing and Search is of paramount importance, but reliable num
 While there are many benchmark results published, they all vary depending on 
 * number of documents, 
 * size of document, 
+* number of parallel users
+* number of keywords per query,
 * hardware (Processor, RAM, SSD type), 
 * search software version,
 * standalone vs. cloud mode (sharding)
 * operating system, 
 * file system
-* number of parallel users
-* number of keywords per query
 
 The only way to objectively compare technologies is to run a benchmark according to **your** requirements on **your** hardware.
 <br><br>
