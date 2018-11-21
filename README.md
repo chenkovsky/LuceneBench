@@ -34,22 +34,20 @@ Test data and search index are stored on different disks in order to utilize the
 
 ![Benchmark](https://wolfgarbe.github.io/LuceneBench/img/lucenebench.png "Benchmark")
 
-|                           | [Lucene](http://lucene.apache.org/core/) v7.5   | [SeekStorm](https://seekstorm.com/) v0.1   |
-| :--- | ---: | ---: |    
-| **Search Throughput** (QPS)   | 62  | 553  |
-| **Search Latency** (ms)   | 80  | 12  |
-| &nbsp;&nbsp;&nbsp;mean |  80 | 13  |
-| &nbsp;&nbsp;&nbsp;median |  73 | 13  |
-| &nbsp;&nbsp;&nbsp;75th percentile | 90  | 19  |
-| &nbsp;&nbsp;&nbsp;90th percentile | 116  | 24  |
-| &nbsp;&nbsp;&nbsp;95th percentile | 133  | 27  |
-| &nbsp;&nbsp;&nbsp;98th percentile | 152  | 32  |
-| &nbsp;&nbsp;&nbsp;99th percentile | 176  | 35  |
-| &nbsp;&nbsp;&nbsp;99.9th percentile| 432  | 49  |
-| &nbsp;&nbsp;&nbsp;max| 469  | 52  |
-| **Indexing Speed** (million docs/day) | 1,042 | 473  |
-| **Indexing Speed** (GB/hour)  | 135  | 61  |
-| **Index Size** (GB)           | 16  | 18  |
+|                           | [Lucene](http://lucene.apache.org/core/) v7.5   | [SeekStorm](https://seekstorm.com/) v0.1   | Factor |
+| :--- | ---: | ---: | ---: |    
+| **Search Throughput** (QPS)   | 62  | 580  | **9.4**  | 
+| **Search Latency** (ms)   | 80  |  9 |  9 | **8.9**
+| &nbsp;&nbsp;&nbsp;mean |  80 | 9  |  |
+| &nbsp;&nbsp;&nbsp;median |  73 | 8  |  |
+| &nbsp;&nbsp;&nbsp;90th percentile | 116  | 17  |  |
+| &nbsp;&nbsp;&nbsp;99th percentile | 176  | 28  |  |
+| &nbsp;&nbsp;&nbsp;99.9th percentile| 432  | 58  |  | 
+| **Maximum Throughput** (QPS)   | 64  | 580  | **9** | 
+| **Maximum Concurrent Users**  | 7  | 500  | **71** |
+| **Indexing Speed** (million docs/day) | 1,042 | 473  | **0.5** |
+| **Indexing Speed** (GB/hour)  | 135  | 61  |  **0.5** |
+| **Index Size** (GB)           | 16  | 18  | **1.1** |
 
 ### Benchmark conditions
 Title, content, domain, url, date fields are stored and retrieved.<br>
