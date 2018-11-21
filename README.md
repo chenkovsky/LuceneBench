@@ -9,7 +9,7 @@ Performance for Indexing and Search is of paramount importance, but reliable num
 While there are many benchmark results published, they all vary depending on 
 * number of documents, 
 * size of document, 
-* number of parallel users
+* number of parallel users,
 * number of keywords per query,
 * hardware (Processor, RAM, SSD type), 
 * search software version,
