@@ -24,7 +24,7 @@ public class SearchThread implements Runnable
             } finally {
                 LuceneBenchmark.lock.unlock();
             }
-        }
+        } 
         finally
         {
             LuceneBenchmark.searchSemaphore.release();

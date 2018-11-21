@@ -13,8 +13,11 @@ import java.util.concurrent.locks.ReentrantLock;
 //ImportWikipedia
 public class LuceneBenchmark 
 {
+    //true: index and search
+    //false: search only in existing index
     public static Boolean newindex=false;
-    public static int querySize = 2000;
+
+    public static int querySize = 40000;
 
     public static long linecount = 0;
     public static long indexedDocCount=0;
@@ -143,13 +146,11 @@ public class LuceneBenchmark
 
             System.out.println("availablePermits: "+indexSemaphore.availablePermits());
         }
+
         //--------------------------
-
-        LoadQueries("C:/data/09.mq.topics.20001-60000.txt");
-
-        
-
+   
         // Search
+        LoadQueries("C:/data/09.mq.topics.20001-60000.txt");
 
         //warmup
         LuceneBenchmark.lucene.search("test");  
@@ -167,12 +168,10 @@ public class LuceneBenchmark
 
             for (String s : queries) 
             {
-                //lucene.search(s);  
                 try{
                     searchSemaphore.acquire();
                 }catch(Exception e){}
-                searchExecutor.submit(new SearchThread(s));
-
+                searchExecutor.submit(new SearchThread(s));              
                 queryCount++;
                 if (queryCount>=querySize) break;
             }
