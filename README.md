@@ -6,8 +6,17 @@ LuceneBench<br>
 [SeekStorm](https://seekstorm.com) is a high-performance search platform written in C#, powering the SeekStorm Search as a Service.
 <br><br>
 Performance for Indexing and Search is of paramount importance, but reliable numbers are hard to obtain. 
-While there are many benchmark results published, they all vary depending on the number of documents, size of document, the hardware (Processor, RAM, SSD type), operating system, the number of parallel users. 
-<br><br>
+While there are many benchmark results published, they all vary depending on 
+* number of documents, 
+* size of document, 
+* number of parallel users,
+* number of keywords per query,
+* hardware (Processor, RAM, SSD type), 
+* search software version,
+* standalone vs. cloud mode (sharding)
+* operating system, 
+* file system
+
 The only way to objectively compare technologies is to run a benchmark according to **your** requirements on **your** hardware.
 <br><br>
 ## Key Performance Indicators
@@ -65,6 +74,6 @@ Intel Core i7-8750H<br>
 Samsung 970 EVO SSD, 1TB<br>
 
 ### Software
-Lucene 7.5.2<br>
+Lucene 7.5.0<br>
 Java JRE 10.0.2<br>
 Microsoft Windows 10 Professional<br>
