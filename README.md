@@ -47,7 +47,7 @@ Test data and search index are stored on different disks in order to utilize the
 | **Maximum Concurrent Users**  | 7  | 500  | **71** |
 | **Indexing Speed** (million docs/day) | 1,042 | 473  | **0.5** |
 | **Indexing Speed** (GB/hour)  | 135  | 61  |  **0.5** |
-| **Index Size** (GB)           | 16  | 18  | **1.1** |
+| **Index Size** (GB)           | 16  | 18  | **0.9** |
 
 ### Benchmark conditions
 Title, content, domain, url, date fields are stored and retrieved.<br>
