@@ -16,6 +16,7 @@ While there are many benchmark results published, they all vary depending on
 * file system
 * number of parallel users
 * number of keywords per query
+
 <br><br>
 The only way to objectively compare technologies is to run a benchmark according to **your** requirements on **your** hardware.
 <br><br>
