@@ -37,7 +37,7 @@ Test data and search index are stored on different disks in order to utilize the
 |                           | [Lucene](http://lucene.apache.org/core/) v7.5   | [SeekStorm](https://seekstorm.com/) v0.1   | Factor |
 | :--- | ---: | ---: | ---: |    
 | **Search Throughput** (QPS)   | 62  | 580  | **9.4**  | 
-| **Search Latency** (ms)   | 80  |  9 |  9 | **8.9**
+| **Search Latency** (ms)   | 80  |  9 |  **8.9** | 
 | &nbsp;&nbsp;&nbsp;mean |  80 | 9  |  |
 | &nbsp;&nbsp;&nbsp;median |  73 | 8  |  |
 | &nbsp;&nbsp;&nbsp;90th percentile | 116  | 17  |  |
