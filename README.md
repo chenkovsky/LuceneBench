@@ -11,6 +11,7 @@ While there are many benchmark results published, they all vary depending on
 * size of document, 
 * number of parallel users,
 * number of keywords per query,
+* term processing (stopwords, stemming),
 * hardware (Processor, RAM, SSD type), 
 * search software version,
 * standalone vs. cloud mode (sharding)
