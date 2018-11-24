@@ -12,7 +12,7 @@ While there are many benchmark results published, they all vary depending on
 * number of parallel users,
 * number of keywords per query,
 * term processing (tokenizer, stemmer, stop-words filter),
-* hardware (Processor, RAM, SSD type) [Lucenes Benchmark](https://home.apache.org/~mikemccand/lucenebench/) uses dual Xeon E5 2699 v3 CPUs with 72 cores and 256 GB RAM, 
+* hardware (Processor, RAM, SSD type) [Lucene Benchmark](https://home.apache.org/~mikemccand/lucenebench/) uses 2x Xeon E5 2699 with 72 cores, 256 GB RAM, 
 * search software version,
 * standalone vs. cloud mode (sharding)
 * operating system, 
