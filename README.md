@@ -16,7 +16,11 @@ While there are many benchmark results published, they all vary depending on
 * search software version,
 * standalone vs. cloud mode (sharding)
 * operating system, 
-* file system
+* file system,
+* whether TotalHits* are counted or just estimated,
+* whether the **best ranked results** are returned or there is an early termination after **some results** are found.
+
+* *It seems that Lucene just estimates the result number instead of a throughout search: [1.](https://stackoverflow.com/questions/53435939/result-number-for-boolean-queries-with-apache-lucene) [2.](https://issues.apache.org/jira/browse/LUCENE-8060) [3.](https://issues.apache.org/jira/browse/LUCENE-8430) [4.](https://issues.apache.org/jira/browse/LUCENE-8431)*
 
 The only way to objectively compare technologies is to run a benchmark according to **your** requirements on **your** hardware.
 <br><br>
