@@ -11,11 +11,17 @@ While there are many benchmark results published, they all vary depending on
 * size of document, 
 * number of parallel users,
 * number of keywords per query,
-* hardware (Processor, RAM, SSD type), 
+* term processing (tokenizer, stemmer, stop-words filter),
+* default query operator (Lucene uses OR as default)
+* hardware (Processor, RAM, SSD type) [Lucene Benchmark](https://home.apache.org/~mikemccand/lucenebench/) uses 2x Xeon E5 2699 with 72 cores, 256 GB RAM, 
 * search software version,
 * standalone vs. cloud mode (sharding)
 * operating system, 
-* file system
+* file system,
+* whether TotalHits are counted or just estimated (*seems Lucene estimates instead of a throughout search: [1.](https://issues.apache.org/jira/browse/LUCENE-8060) [2.](https://issues.apache.org/jira/browse/LUCENE-8430) [3.](https://issues.apache.org/jira/browse/LUCENE-8431)*)
+* whether the **best ranked results** are returned or there is an early termination after **some results** are found.
+
+
 
 The only way to objectively compare technologies is to run a benchmark according to **your** requirements on **your** hardware.
 <br><br>
@@ -47,23 +53,24 @@ Test data and search index are stored on different disks in order to utilize the
 
 |                           | [Lucene](http://lucene.apache.org/core/) v7.5   | [SeekStorm](https://seekstorm.com/) v0.1   | Factor |
 | :--- | ---: | ---: | ---: |    
-| **Search Latency** (ms, 5 concurrent users)   | 80  |  9 |  **8.9** | 
-| &nbsp;&nbsp;&nbsp;mean |  80 | 9  |  |
-| &nbsp;&nbsp;&nbsp;median |  73 | 8  |  |
-| &nbsp;&nbsp;&nbsp;90th percentile | 116  | 17  |  |
-| &nbsp;&nbsp;&nbsp;99th percentile | 176  | 28  |  |
-| &nbsp;&nbsp;&nbsp;99.9th percentile| 432  | 58  |  | 
-| **Maximum Throughput** (QPS)   | 64  | 580  | **9** | 
-| **Maximum Concurrent Users** (latency<1s) | 7  | 600  | **86** |
-| **Indexing Speed** (million docs/day) | 1,042 | 473  | **0.5** |
-| **Indexing Speed** (GB/hour)  | 135  | 61  |  **0.5** |
-| **Index Size** (GB)           | 16  | 18  | **0.9** |
+| **Search Latency** (ms, 4 concurrent users)   | 59  |  8 |  **7.4** | 
+| &nbsp;&nbsp;&nbsp;mean |  59 | 8  |  |
+| &nbsp;&nbsp;&nbsp;median |  57 | 7  |  |
+| &nbsp;&nbsp;&nbsp;90th percentile | 78  | 15  |  |
+| &nbsp;&nbsp;&nbsp;99th percentile | 110  | 25  |  |
+| **Maximum Throughput** (QPS)   | 68  | 580  | **8.6** | 
+| **Maximum Concurrent Users** (latency<1s) | 4  | 600  | **150** |
+| **Indexing Speed** (million docs/day) | 1,121 | 473  | **0.42** |
+| **Indexing Speed** (GB/hour)  | 145  | 61  |  **0.42** |
+| **Index Size** (GB)           | 17  | 18  | **0.95** |
 
 ### Benchmark conditions
 Title, content, domain, url, date fields are stored and retrieved.<br>
 Full text search in all fields.<br>
 KWIC summary generated from content field.<br>
-Multithreaded queries: 5 Threads (optimum)<br>
+Lucene SimpleAnalyzer (No stopwords, no stemming).<br>
+Lucene DefaultOperater: AND<br>
+Multithreaded queries: 4 Threads (>4 crash)<br>
 Multithreaded indexing: 16 Threads (as [recommended](https://home.apache.org/~mikemccand/lucenebench/indexing.html))<br>
 Lucene RAM buffer size: 2048 MB (as [recommended](https://home.apache.org/~mikemccand/lucenebench/indexing.html))<br>
 JRE parameters: -Xmx8g -Xms8g -server (as [recommended](https://home.apache.org/~mikemccand/lucenebench/indexing.html))
