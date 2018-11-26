@@ -82,5 +82,5 @@ Samsung 970 EVO SSD, 1TB<br>
 
 ### Software
 Lucene 7.5.0<br>
-Java JRE 10.0.2<br>
+Java JRE 11.0.1<br>
 Microsoft Windows 10 Professional<br>
