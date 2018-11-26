@@ -12,12 +12,13 @@ While there are many benchmark results published, they all vary depending on
 * number of parallel users,
 * number of keywords per query,
 * term processing (tokenizer, stemmer, stop-words filter),
+* default query operator (Lucene uses OR as default)
 * hardware (Processor, RAM, SSD type) [Lucene Benchmark](https://home.apache.org/~mikemccand/lucenebench/) uses 2x Xeon E5 2699 with 72 cores, 256 GB RAM, 
 * search software version,
 * standalone vs. cloud mode (sharding)
 * operating system, 
 * file system,
-* whether TotalHits are counted or just estimated (*seems Lucene estimates instead of a throughout search: [1.](https://stackoverflow.com/questions/53435939/result-number-for-boolean-queries-with-apache-lucene) [2.](https://issues.apache.org/jira/browse/LUCENE-8060) [3.](https://issues.apache.org/jira/browse/LUCENE-8430) [4.](https://issues.apache.org/jira/browse/LUCENE-8431)*)
+* whether TotalHits are counted or just estimated (*seems Lucene estimates instead of a throughout search: [1.](https://issues.apache.org/jira/browse/LUCENE-8060) [2.](https://issues.apache.org/jira/browse/LUCENE-8430) [3.](https://issues.apache.org/jira/browse/LUCENE-8431)*)
 * whether the **best ranked results** are returned or there is an early termination after **some results** are found.
 
 
