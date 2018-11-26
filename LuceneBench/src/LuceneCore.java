@@ -1,5 +1,6 @@
 
-import org.apache.lucene.analysis.standard.StandardAnalyzer;
+//import org.apache.lucene.analysis.standard.StandardAnalyzer;
+import org.apache.lucene.analysis.core.SimpleAnalyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
 import org.apache.lucene.index.IndexWriter;
@@ -14,7 +15,7 @@ import org.apache.lucene.document.TextField;
 import org.apache.lucene.document.StoredField;
 import org.apache.lucene.search.highlight.Highlighter;
 import org.apache.lucene.search.highlight.QueryScorer;
-import org.apache.lucene.analysis.TokenStream;
+//import org.apache.lucene.analysis.TokenStream;
 
 import java.nio.file.Paths;
 
@@ -25,7 +26,8 @@ public class LuceneCore
 
 	// Specify the analyzer for tokenizing text.
 	// The same analyzer should be used for indexing and searching
-	StandardAnalyzer analyzer;
+	//StandardAnalyzer analyzer;
+	SimpleAnalyzer analyzer;
 
 	// Writing object, linked to the repository
 	IndexWriter writer = null;
@@ -40,7 +42,8 @@ public class LuceneCore
 
 	LuceneCore() {
 		// Instantiate the analyzer
-		analyzer = new StandardAnalyzer();
+		//analyzer = new StandardAnalyzer();
+		analyzer = new SimpleAnalyzer();
 
 		// Define document and fields
 		/*
@@ -83,6 +86,7 @@ public class LuceneCore
 			// Instantiate a query parser
 			//QueryParser parser = new QueryParser( "content", analyzer);
 			MultiFieldQueryParser parser = new MultiFieldQueryParser(new String[]{"title", "content","domain","url"},analyzer);
+			parser.setDefaultOperator(parser.AND_OPERATOR);
 
 			// Parse
 			Query q = parser.parse(querystr);
@@ -105,6 +109,9 @@ public class LuceneCore
 			ScoreDoc[] hits = topDocs.scoreDocs;
 			//totalHits=topDocs.totalHits;
 			totalHits=(long)hits.length;
+
+			//testonly
+			//System.out.println("query: "+querystr + " " + hits.length+" "+String.format("%,d",topDocs.totalHits));
 
 			Highlighter highlighter = new Highlighter(new QueryScorer(q));		
 

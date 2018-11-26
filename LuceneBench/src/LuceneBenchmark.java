@@ -15,7 +15,7 @@ public class LuceneBenchmark
 {
     //true: index and search
     //false: search only in existing index
-    public static Boolean newindex=false;
+    public static Boolean newindex=true;
 
     public static int querySize = 40000;
 
@@ -143,11 +143,20 @@ public class LuceneBenchmark
             String.format("%,d",indexedDocCount * 1000 * 3600 * 24 / millis) + " (" + String.format("%,d",linecount / 5 * 1000 * 3600 * 24 / millis) + 
             ")" + " GB/hour: " + (filesize * 1000 * 3600 / millis / 1024 / 1024 / 1024)+"  minutes: "+ 
             (millis/(long)60000));
-
-            System.out.println("availablePermits: "+indexSemaphore.availablePermits());
         }
 
         //--------------------------
+
+        
+        //testonly
+        /*
+        LuceneBenchmark.lucene.search("the");  
+        LuceneBenchmark.lucene.search("who");  
+        LuceneBenchmark.lucene.search("the who");  
+        LuceneBenchmark.lucene.search("\"the who\"");  
+        if (true) return;
+        */
+        
    
         // Search
         LoadQueries("C:/data/09.mq.topics.20001-60000.txt");
@@ -155,7 +164,7 @@ public class LuceneBenchmark
         //warmup
         LuceneBenchmark.lucene.search("test");  
 
-        for (int concurrentUsers=1;concurrentUsers<=10;concurrentUsers++) 
+        for (int concurrentUsers=1;concurrentUsers<=4;concurrentUsers++) //1..10
         {
             int maxSearchThreads=concurrentUsers;
             ExecutorService searchExecutor = Executors.newFixedThreadPool(maxSearchThreads);
