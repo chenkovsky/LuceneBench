@@ -13,7 +13,7 @@ While there are many benchmark results published, they all vary depending on
 * number of keywords per query,
 * term processing (tokenizer, stemmer, stop-words filter),
 * default query operator (Lucene uses OR as default)
-* implicit phrase search (are all results which satisfy a phrase are ranked on top)
+* implicit phrase search (are all results which satisfy a phrase are ranked on top; Lucene:no, SeekStorm:yes)
 * hardware (Processor, RAM, SSD type) [Lucene Benchmark](https://home.apache.org/~mikemccand/lucenebench/) uses 2x Xeon E5 2699 with 72 cores, 256 GB RAM, 
 * search software version,
 * standalone vs. cloud mode (sharding)
