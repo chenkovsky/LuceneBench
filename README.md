@@ -70,7 +70,7 @@ Title, content, domain, url, date fields are stored and retrieved.<br>
 Full text search in all fields.<br>
 KWIC summary generated from content field.<br>
 Lucene SimpleAnalyzer (No stopwords, no stemming).<br>
-Lucene DefaultOperater: AND<br>
+Lucene DefaultOperator: AND<br>
 Multithreaded queries: 4 Threads (>4 crash)<br>
 Multithreaded indexing: 16 Threads (as [recommended](https://home.apache.org/~mikemccand/lucenebench/indexing.html))<br>
 Lucene RAM buffer size: 2048 MB (as [recommended](https://home.apache.org/~mikemccand/lucenebench/indexing.html))<br>
