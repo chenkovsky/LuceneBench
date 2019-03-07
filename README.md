@@ -64,7 +64,7 @@ Test data and search index are stored on different disks in order to utilize the
 | **Indexing Speed** (million docs/day) | 1,239 | 473  | **0.38** |
 | **Indexing Speed** (GB/hour)  | 160  | 61  |  **0.38** |
 | **Index Size** (GB)           | 17  | 29  | **0.59** |
-| **Write Amplification**       | 6.19 | 1.12 | **5.53** |
+| **Write Amplification**       | 6.19 | 1.11 | **5.58** |
 
 ### Benchmark conditions
 Title, content, domain, url, date fields are stored and retrieved.<br>
