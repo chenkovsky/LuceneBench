@@ -59,12 +59,12 @@ Test data and search index are stored on different disks in order to utilize the
 | &nbsp;&nbsp;&nbsp;median |  57 | 5  |  |
 | &nbsp;&nbsp;&nbsp;90th percentile | 78  | 20  |  |
 | &nbsp;&nbsp;&nbsp;99th percentile | 110  | 39  |  |
-| **Maximum Throughput** (QPS)   | 68  | 774  | **11.4** | 
+| **Maximum Throughput** (QPS)   | 68  | 737  | **10.8** | 
 | **Maximum Concurrent Users** (latency<1s) | 4  | 600  | **150** |
-| **Indexing Speed** (million docs/day) | 1,239 | 293  | **0.24** |
-| **Indexing Speed** (GB/hour)  | 160  | 37  |  **0.24** |
-| **Index Size** (GB)           | 17  | 28  | **0.61** |
-| **Write Amplification**       | 6.19 | 1.12 | **5.53** |
+| **Indexing Speed** (million docs/day) | 1,239 | 242  | **0.20** |
+| **Indexing Speed** (GB/hour)  | 160  | 31  |  **0.20** |
+| **Index Size** (GB)           | 17  | 25  | **0.68** |
+| **Write Amplification**       | 6.19 | 1.14 | **5.43** |
 
 ### Benchmark conditions
 Title, content, domain, url, date fields are stored and retrieved.<br>
