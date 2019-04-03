@@ -63,7 +63,7 @@ Test data and search index are stored on different disks in order to utilize the
 | **Maximum Concurrent Users** (latency<1s) | 4  | 600  | **150** |
 | **Indexing Speed** (million docs/day) | 1,239 | 242  | **0.20** |
 | **Indexing Speed** (GB/hour)  | 160  | 31  |  **0.20** |
-| **Index Size** (GB)           | 17  | 25  | **0.68** |
+| **Index Size** (GB)           | 17  | 29  | **0.59** |
 | **Write Amplification**       | 6.19 | 1.14 | **5.43** |
 
 ### Benchmark conditions
