@@ -54,11 +54,11 @@ Test data and search index are stored on different disks in order to utilize the
 
 |                           | [Lucene](http://lucene.apache.org/core/) v7.5   | [SeekStorm](https://seekstorm.com/) v0.1   | Factor |
 | :--- | ---: | ---: | ---: |    
-| **Search Latency** (ms, 4 concurrent users)   | 59  |  7 |  **8.4** | 
-| &nbsp;&nbsp;&nbsp;mean |  59 | 7  |  |
-| &nbsp;&nbsp;&nbsp;median |  57 | 5  |  |
-| &nbsp;&nbsp;&nbsp;90th percentile | 78  | 20  |  |
-| &nbsp;&nbsp;&nbsp;99th percentile | 110  | 39  |  |
+| **Search Latency** (ms, 4 concurrent users)   | 59  |  4 |  **14.8** | 
+| &nbsp;&nbsp;&nbsp;mean |  59 | 4  |  |
+| &nbsp;&nbsp;&nbsp;median |  57 | 2  |  |
+| &nbsp;&nbsp;&nbsp;90th percentile | 78  | 13  |  |
+| &nbsp;&nbsp;&nbsp;99th percentile | 110  | 26  |  |
 | **Maximum Throughput** (QPS)   | 68  | 1133  | **16.7** | 
 | **Maximum Concurrent Users** (latency<1s) | 4  | 600  | **150** |
 | **Indexing Speed** (million docs/day) | 1,239 | 499  | **0.40** |
